@@ -1,0 +1,179 @@
+body{
+  font-family: 'Dancing Script', cursive;
+  background-color: #02010a;
+}
+
+.contBanner{
+  background-color: #5b7989;
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  display: flex;
+}
+
+.bannerTitulo{
+  text-shadow: 2px 2px 2px #02010a;
+  text-align: left;
+  font-style: italic;
+  font-size: 30px;
+  width: 70%;
+  color: white;
+  order: 1;
+}
+
+.bannerMenu{
+  float: right;
+  text-align: right;
+  margin: 0px 5px;
+  width: 30%;
+  order: 2;
+}
+
+.bannerMenu a{
+  color: white;
+}
+
+.linkActual{
+  text-decoration: none;
+}
+
+.centralImg{
+  width: 100%;
+  background-color: #82c3a6;
+  text-align:center;
+  margin: 0px;
+}
+
+.centralImg img{
+  width: 70%;
+  margin: 10px;
+}
+
+.contenedorImg{
+  background-color: #d5c75f;
+  display: flex;
+	flex-flow: nowrap;
+  width: 100%;
+  margin: 0px;
+  text-align: center;
+}
+
+.imgIzq img{
+  border:1px solid black;
+  margin: 10px;
+  width: 80%;
+  order: 1;
+}
+
+.imgDer img{
+  border:1px solid black;
+  margin: 10px;
+  width: 80%;
+  order: 2;
+}
+
+.imgIzq :hover{
+  transform: rotate(10deg);
+  border: 2px solid #82c3a6;
+}
+
+.imgDer :hover{
+  transform: translate(20px) translateY(-5px);
+  border: 2px solid #82c3a6;
+}
+
+footer{
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+	flex-flow: row;
+  background-color: #C6d5c5;
+}
+
+footer div{
+  margin: 10px;
+  width: 25%;
+}
+
+img[src$='.svg']{
+  border-radius: 50px;
+}
+
+.galeria{
+  display: flex;
+	flex-flow: nowrap;
+  width: 100%;
+  margin: 0px;
+  text-align: center;
+}
+
+.galeria div img{
+  width: 90%;
+}
+
+.imgGaleria1{
+  -webkit-filter: blur(10px);
+}
+
+.imgGaleria2, .imgGaleria4, .imgGaleria6{
+  -webkit-filter: grayscale(100%);
+}
+
+.imgGaleria3{
+  -webkit-filter: sepia(90%);
+}
+
+@media all and (max-width: 480px) {
+  .contBanner{
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .bannerTitulo{
+    width: 100%;
+    text-align: center;
+  }
+  .bannerMenu{
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+  .contenedorImg{
+    flex-flow: row wrap;
+  }
+  .imgDer{
+    visibility: collapse;
+  }
+  .imgIzq img{
+    width: 80%;
+  }
+
+  footer{
+    flex-flow: column;
+  }
+
+  footer div{
+    width: 100%;
+  }
+
+  .galeria{
+    flex-flow: column;
+  }
+
+  .galeria div img{
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes headerAnimacion{
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
+
+header{
+  animation: headerAnimacion 3s;
+}
